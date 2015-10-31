@@ -1,0 +1,479 @@
+@charset "utf-8";
+
+/*
+Theme Name:ネコちゃんにゃーにゃー;
+Auther: 350;
+------------------------*/
+
+/* =Reset default browser CSS.
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+:focus {outline: 0;}
+
+ol, ul {list-style: none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a {text-decoration: underline; color: inherit;}
+a img {border: 0; cursor: pointer;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+/*ボディ部分　やっぱりデザインは苦手だ
+--------------------------------------------------------------- */
+
+body{
+	font: 16px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+	color:#333;
+	background: url("../images/bg.gif");
+}
+
+.container{
+	width:1020px;
+	margin: 0 auto;
+}
+
+img{
+	max-width: 100%;
+}
+
+/* ヘッダー部分
+--------------------------------------------------------------- */
+
+header{
+	height: 120px;
+	position: relative;
+}
+
+header h1{
+	font-size: 50%;
+	padding: 5px 0;
+	margin: 0;
+	text-align: left;
+	margin-bottom: 25px;
+}
+
+header h2{
+	width: 50%;
+	height: 70px;
+	background: url("../images/logo.png") no-repeat;
+	bottom: 0;
+	left: 0;
+}
+
+nav{
+	width: 47%;
+	margin-left: 2%;
+	position: absolute;
+	bottom:0;
+	right:0;
+}
+
+nav a li{
+	background: #F93;
+	color: #FFF;
+	text-decoration: none;
+	margin-left: 1px;
+	padding: 5px 10px 2px;
+	float: right;
+	list-style: none;
+	border: 2px solid #FA4;
+	border-bottom: 0;
+	border-radius: 5px 5px 0 0 ;
+}
+
+/*サイドバー対策
+--------------------------------------------------------------- */
+
+.content{
+	position: relative;
+}
+
+/*　メインコンテンツ部分
+--------------------------------------------------------------- */
+
+main{
+	width: 70%;
+	background: #FFF;
+	display: block;
+	min-height: 650px;
+}
+
+main h2{
+	color: #F93;
+	padding-left: 10px;
+	font-size: 130%;
+	margin-top: 20px;
+	text-decoration: underline;
+	clear: both;
+}
+
+main h2:before {
+	content:"♪";
+}
+
+main p{
+	padding-left: 20px;
+}
+
+section{
+	width: 100%;
+	margin-bottom: 20px;
+	right: 0;
+}
+
+.top_img{
+	width: 100%;
+}
+.top_img img{
+	border-radius: 5px;
+}
+
+/*ボタンのCSS　参考：http://www.nxworld.net/tips/css-only-button-design-and-hover-effects.html*/
+.nya{
+	position: relative;
+	padding: 0 10px;
+	background-color: #f7d034;
+	border: none;
+	border-radius: 4px;
+	font-size: 110%;
+	color: #fff;
+	line-height: 30px;
+	-webkit-transition: none;
+	transition: none;
+	box-shadow: 0 3px 0 #f7ba59;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+
+.nya:hover{
+	top: -4px;
+	box-shadow: 0 7px 0 #f7ba59;
+}
+
+.nya:active{
+	top: 3px;
+	box-shadow: none;
+}
+
+.alert{
+	color: #F00;
+	font-weight: bold;
+}
+
+.correct{
+	color: #99cc33;
+	font-weight: bold;
+}
+
+/*　トップページ ランキング用
+--------------------------------------------------------------- */
+.cat_ranking div{
+	float: left; 
+	margin-left: 10px;
+	padding: 1px;
+	background: #fff;
+}
+
+.cat_ranking div:first-child{
+	color: #FFD700;
+	width: 95%;
+	margin: 20px 0 20px 20px;
+	font-size: 150%;
+}
+
+.cat_ranking div:first-child img{
+	width: 300px;
+	height: auto;
+	max-height: 300px;
+	float: left;
+	margin-right: 10px;
+}
+
+.cat_ranking div:first-child:before{
+	content: "1位"
+}
+
+.cat_ranking div:nth-child(2){
+	color: #b2b2b2;
+	float: left;
+	width: 47%; 
+	padding: 1px; 
+	background: #fff; 
+	margin-bottom: 20px; 
+	margin-right: 3px;
+}
+
+.cat_ranking div:nth-child(2) img{
+	float: left;
+	width: 150px;
+	height: auto;
+	max-height: 150px;
+	margin-right: 10px;
+}
+
+.cat_ranking div:nth-child(2):before{
+	content: "2位"
+}
+
+
+.cat_ranking div:nth-child(3){
+	color: #C47222;
+	float: left; 
+	width: 47%; 
+	padding: 1px; 
+	background: #fff; 
+	margin-bottom: 20px;
+}
+
+.cat_ranking div:nth-child(3) img{
+	float: left;
+	width: 150px;
+	height: auto;
+	max-height: 150px;
+	margin-right: 10px;
+}
+
+.cat_ranking div:nth-child(3):before{
+	content: "3位"
+}
+
+.new_cats_photos{
+	margin-left: 20px;
+}
+
+.new_cats_photos div{
+	display: inline-block;
+  	width: 32%;
+  	margin-top: 15px;
+}
+
+.new_cats_photos div img{
+	width: 100px;
+	height: auto;
+	max-height: 100px;
+	float: left;
+	margin-right: 5px;
+}
+
+.new_cats_photos div button{
+	clear: both;
+}
+
+/*　ねこ一覧ページ 
+--------------------------------------------------------------- */
+
+.list_cats{
+	margin-left: 20px;
+}
+
+.list_cats div{
+	display: inline-block;
+	width: 32%;
+	margin-top: 15px;
+}
+
+.list_cats div img{
+	width: 100px;
+	height: auto;
+	max-height: 100px;
+	margin-right:  5px;
+	float: left;
+}
+
+.list_cats div button{
+	clear: both;
+}
+
+/*　ねこ単体ページ &　写真一覧ページ
+--------------------------------------------------------------- */
+
+.single_cat img{
+	width: 100%;
+	max-width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.list_photos{
+	margin-left: 20px;
+}
+
+.list_photos div{
+	display: inline-block;
+	width: 28%;
+	margin-top: 15px;
+	margin-right: 30px;
+	text-align: center;
+}
+
+.list_photos div img{
+	width: 100%;
+	height: auto;
+	margin-top: 15px;
+	margin-right:  5px;
+}
+
+/*　写真単体ページ
+--------------------------------------------------------------- */
+
+.single_photo img{
+	width: 100%;
+	max-width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.comments article{
+	width: 90%;
+	margin: 0 auto 5px;
+	border: 2px solid #CCC;
+}
+
+.comments dl{
+	margin-left: 50px;
+}
+
+/*　編集ページ
+--------------------------------------------------------------- */
+
+.cat_edit{
+	margin-right: 20px;
+	display: block
+}
+
+.cat_edit dl{
+	margin-left: 20px;
+}
+
+
+/*マイページ
+--------------------------------------------------------------- */
+
+.mypage{
+	margin-left: 20px;
+}
+
+.mypage div{
+	clear: both;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.mypage div img{
+	float: left;
+	width: 20%;
+}
+
+.mypage hr{
+	margin-bottom: 20px;
+}
+
+/*ねこ編集ページ
+--------------------------------------------------------------- */
+
+.cat_edit dl{
+	margin-bottom: 20px;
+}
+
+/*ねこ新規ページ
+--------------------------------------------------------------- */
+
+.cat_new dl{
+	margin-left: 20px;
+}
+
+/*パスワード再発行
+--------------------------------------------------------------- */
+
+.forget_password form{
+	margin-left: 20px;
+}
+
+/*当サイトについて
+--------------------------------------------------------------- */
+.about{
+	margin-left: 20px;
+}
+
+/*ユーザー登録
+--------------------------------------------------------------- */
+
+.form{
+	margin-left: 50px;
+}
+
+.form div{
+	height: 30px;
+}
+
+/*確認画面
+--------------------------------------------------------------- */
+
+.comfirm {
+	margin-left: 50px;
+}
+
+.comfirm dd{
+	margin-bottom: 20px;
+}
+
+
+
+/*ページネーション用
+--------------------------------------------------------------- */
+
+.pagenation{
+	margin: 20px auto;
+	text-align: center;
+	width: 100%!important;
+}
+
+.pagenation a{
+	border: #333 solid 1px;
+	padding: 5px;
+}
+
+
+/*　サイドバー部分
+--------------------------------------------------------------- */
+
+aside{
+	width: 29%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background: #eee;
+	padding-left: 1%;
+}
+
+aside h3{
+	margin-top: 20px;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+aside h4{
+	font-weight: bold;
+	margin: 5px auto;
+	text-align: center;
+}
+
+aside img{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
+
+/*　フッター部分
+--------------------------------------------------------------- */
+
+footer{
+	margin-top: -20px;
+	background: #3CA;
+	text-align: center;
+}
